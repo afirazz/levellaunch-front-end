@@ -1,0 +1,23 @@
+/* --- BASE COLOURS --- */
+:root {
+    --white: #FCF6EE;
+    --darkblue: #001F34;
+  }
+
+/* --- CSS RESET --- */
+html {
+    /* font-family: var(--body-font), sans-serif; */
+    font-size: 16px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header, footer {
+    padding: 10px 16px;  
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
