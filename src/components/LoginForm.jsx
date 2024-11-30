@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import postLogin from "../api/post-login.js";
-import useAuth from "../hooks/use-auth.js";
+import { useAuth } from "../hooks/use-auth.js";
 
 function LoginForm() {
     const navigate = useNavigate();
