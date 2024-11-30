@@ -33,6 +33,8 @@ function LoginForm() {
                     token: response.token,
                 })
                 navigate("/");
+            }).catch((error) => {
+                window.alert(error.message)
             });
         }
     };
