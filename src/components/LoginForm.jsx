@@ -7,6 +7,7 @@ import { useAuth } from "../hooks/use-auth.js";
 function LoginForm() {
     const navigate = useNavigate();
     const {auth, setAuth} = useAuth();
+    const [isLoading, setIsLoading] = useState(false)
 
     const [credentials, setCredentials] = useState({
         username: "",
@@ -23,6 +24,7 @@ function LoginForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsLoading(true)
         if (credentials.username && credentials.password) {
             postLogin(
                 credentials.username,
@@ -34,6 +36,7 @@ function LoginForm() {
                 })
                 navigate("/");
             }).catch((error) => {
+                setIsLoading(false)
                 window.alert(error.message)
             });
         }
@@ -59,8 +62,8 @@ function LoginForm() {
                 onChange={handleChange}
             />
         </div>
-        <button type="submit" onClick={handleSubmit}> 
-            Login
+        <button type="submit" onClick={handleSubmit} disabled={isLoading}> 
+            {isLoading ? "Loading" : "Login"}
         </button>
       </form>
     );
