@@ -1,12 +1,21 @@
+/* --- BASE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --heading-font: Playfair Display;
+  --body-font: Fira Sans;
+}
+
 /* --- BASE COLOURS --- */
 :root {
     --white: #FCF6EE;
     --darkblue: #001F34;
+    --blue: #1F2167;
   }
 
 /* --- CSS RESET --- */
 html {
-    /* font-family: var(--body-font), sans-serif; */
+    font-family: var(--body-font), sans-serif;
     font-size: 16px;
     background-color: var(--darkblue);
     color: var(--white);
@@ -20,4 +29,31 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+h1 {
+    font-family: var(--heading-font), serif;
+    font-size: 48px;
+    padding: 8px 10px 6px;
+}
+h2 {
+    color: var(--darkbrown);
+    font-family: var(--heading-font), serif;
+    font-size: 36px;
+    padding: 6px 10px 16px;
+}
+h3 {
+    color: var(--darkbrown);
+    font-family: var(--heading-font), serif;
+    font-size: 24px;
+    padding: 8px 10px 8px;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: auto;
+    height: auto;
+}
+input, button, textarea, select {
+    font: inherit;
 }

@@ -1,0 +1,14 @@
+.nav-bar {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-bar a {
+    padding: 10px;
+}
+
+.nav-bar a:hover {
+    background-color: white;
+}

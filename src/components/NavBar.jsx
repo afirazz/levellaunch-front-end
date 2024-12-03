@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
+import "./NavBar.css"
 
 function NavBar() {
   const {auth, setAuth} = useAuth();
@@ -11,8 +12,9 @@ function NavBar() {
 
   return (
     <div>
-      <nav>
+      <nav className="nav-bar">
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         {auth.token ? (
             <Link to="/" onClick={handleLogout}>
                 Log Out
