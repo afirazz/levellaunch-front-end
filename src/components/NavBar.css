@@ -1,5 +1,6 @@
 .nav-bar {
-    background-color: var(--blue);
+    background-color: var(--darkblue);
+    font-family: var(--heading-font), sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -10,5 +11,6 @@
 }
 
 .nav-bar a:hover {
-    background-color: var(--lightblue);
+    text-decoration: underline 2px;
+    text-underline-offset: 0.25rem;
 }
