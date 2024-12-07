@@ -32,19 +32,19 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     list-style: none;
 }
 h1 {
-    font-family: var(--heading-font), serif;
+    font-family: var(--heading-font), sans-serif;
     font-size: 48px;
     padding: 8px 10px 6px;
 }
 h2 {
     color: var(--darkbrown);
-    font-family: var(--heading-font), serif;
+    font-family: var(--heading-font), sans-serif;
     font-size: 36px;
     padding: 6px 10px 16px;
 }
 h3 {
     color: var(--darkbrown);
-    font-family: var(--heading-font), serif;
+    font-family: var(--heading-font), sans-serif;
     font-size: 24px;
     padding: 8px 10px 8px;
 }
