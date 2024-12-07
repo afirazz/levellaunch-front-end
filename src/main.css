@@ -11,6 +11,7 @@
     --white: #FCF6EE;
     --darkblue: #001F34;
     --blue: #1F2167;
+    --lightblue: #2EDEE6;
   }
 
 /* --- CSS RESET --- */
@@ -48,6 +49,7 @@ h3 {
     padding: 8px 10px 8px;
 }
 a {
+    color: var(--white);
     text-decoration: none;
 }
 img {

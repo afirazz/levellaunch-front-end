@@ -10,5 +10,5 @@
 }
 
 .nav-bar a:hover {
-    background-color: white;
+    background-color: var(--lightblue);
 }
