@@ -1,9 +1,12 @@
 async function postProject(title, description, game_type, goal, start_date, end_date) {
     const url = `${import.meta.env.VITE_API_URL}/projects/`;
+    const token = window.localStorage.setItem("token")
+
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authotization": `Token ${token}`,
       },
       body: JSON.stringify({
         "title": title,
