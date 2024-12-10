@@ -40,7 +40,7 @@ function PledgeForm() {
       )
         .then((response) => {
           console.log(response);
-          //   navigate(`/project/${id}`);
+          window.location.reload(true);
         })
         .catch((error) => {
           setIsLoading(false);

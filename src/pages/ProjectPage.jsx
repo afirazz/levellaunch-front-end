@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import useProject from "../hooks/use-project";
 import PledgeForm from "../components/PledgeForm";
@@ -9,6 +10,15 @@ function ProjectPage() {
   const { id } = useParams();
   // useProject returns three pieces of info, so we need to grab them all here
   const { project, isLoading, error } = useProject(id);
+
+  // console.log({ project });
+  // console.log(project.pledges);
+
+  // const [pledges, setPledges] = useState([project.pledges]);
+
+  // const handleNewPledge = (newPledge) => {
+  //   setPledges((prevPledges) => [...prevPledges, newPledge]);
+  // };
 
   if (isLoading) {
     return (
