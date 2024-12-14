@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+// import { setPledgeFormVisible } from "../pages/ProjectPage";
 
 import postPledge from "../api/post-pledge";
 
@@ -40,7 +41,8 @@ function PledgeForm() {
       )
         .then((response) => {
           console.log(response);
-          window.location.reload(true);
+          setPledgeFormVisible(false);
+          // window.location.reload(true);
         })
         .catch((error) => {
           setIsLoading(false);

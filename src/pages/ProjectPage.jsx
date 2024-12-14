@@ -11,6 +11,22 @@ function ProjectPage() {
   // useProject returns three pieces of info, so we need to grab them all here
   const { project, isLoading, error } = useProject(id);
 
+  const PledgeButton = () => {
+    const [pledgeFormVisible, setPledgeFormVisible] = useState(false);
+    const onClick = () => setPledgeFormVisible(true);
+    return (
+      <div>
+        <button
+          onClick={onClick}
+          style={pledgeFormVisible ? { display: "none" } : null}
+        >
+          New Pledge
+        </button>
+        {pledgeFormVisible ? <PledgeForm /> : null}
+      </div>
+    );
+  };
+
   // console.log({ project });
   // console.log(project.pledges);
 
@@ -19,6 +35,10 @@ function ProjectPage() {
   // const handleNewPledge = (newPledge) => {
   //   setPledges((prevPledges) => [...prevPledges, newPledge]);
   // };
+
+  const showPledgeForm = () => {
+    return <PledgeForm />;
+  };
 
   if (isLoading) {
     return (
@@ -47,7 +67,8 @@ function ProjectPage() {
           );
         })}
       </ul>
-      <PledgeForm />
+      <PledgeButton />
+      {/* <PledgeForm /> */}
     </div>
   );
 }
