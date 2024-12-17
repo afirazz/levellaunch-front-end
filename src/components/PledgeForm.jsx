@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-// import { setPledgeFormVisible } from "../pages/ProjectPage";
 
 import postPledge from "../api/post-pledge";
 
@@ -16,8 +15,6 @@ function PledgeForm() {
     anonymous: false,
     project: id,
   });
-
-  console.log(pledgeDetails);
 
   const handleChange = (event) => {
     const { id, value } = event.target;
@@ -41,8 +38,13 @@ function PledgeForm() {
       )
         .then((response) => {
           console.log(response);
-          setPledgeFormVisible(false);
-          // window.location.reload(true);
+          setPledgeDetails({
+            amount: "",
+            comment: "",
+            anonymous: false,
+            project: id,
+          });
+          setIsLoading(false);
         })
         .catch((error) => {
           setIsLoading(false);
@@ -59,6 +61,7 @@ function PledgeForm() {
           type="number"
           id="amount"
           placeholder="0"
+          value={pledgeDetails.amount}
           onChange={handleChange}
         />
       </div>
@@ -68,6 +71,7 @@ function PledgeForm() {
           type="text"
           id="comment"
           placeholder="Comment"
+          value={pledgeDetails.comment}
           onChange={handleChange}
         />
       </div>

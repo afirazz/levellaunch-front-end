@@ -11,35 +11,6 @@ function ProjectPage() {
   // useProject returns three pieces of info, so we need to grab them all here
   const { project, isLoading, error } = useProject(id);
 
-  const PledgeButton = () => {
-    const [pledgeFormVisible, setPledgeFormVisible] = useState(false);
-    const onClick = () => setPledgeFormVisible(true);
-    return (
-      <div>
-        <button
-          onClick={onClick}
-          style={pledgeFormVisible ? { display: "none" } : null}
-        >
-          New Pledge
-        </button>
-        {pledgeFormVisible ? <PledgeForm /> : null}
-      </div>
-    );
-  };
-
-  // console.log({ project });
-  // console.log(project.pledges);
-
-  // const [pledges, setPledges] = useState([project.pledges]);
-
-  // const handleNewPledge = (newPledge) => {
-  //   setPledges((prevPledges) => [...prevPledges, newPledge]);
-  // };
-
-  const showPledgeForm = () => {
-    return <PledgeForm />;
-  };
-
   if (isLoading) {
     return (
       <div>
@@ -52,6 +23,28 @@ function ProjectPage() {
     return <p>{error.message}</p>;
   }
 
+  const [pledgeList, setPledgeList] = [project.pledges];
+  console.log(pledgeList);
+
+  const PledgeButton = () => {
+    const [pledgeFormVisible, setPledgeFormVisible] = useState(false);
+    const showPledgeForm = () => setPledgeFormVisible(true);
+    const hidePledgeForm = () => setPledgeFormVisible(false);
+
+    return (
+      <div>
+        <button
+          onClick={showPledgeForm}
+          style={pledgeFormVisible ? { display: "none" } : null}
+        >
+          New Pledge
+        </button>
+        {pledgeFormVisible ? <button onClick={hidePledgeForm}>x</button> : null}
+        {pledgeFormVisible ? <PledgeForm /> : null}
+      </div>
+    );
+  };
+
   return (
     <div>
       <h2>{project.title}</h2>
@@ -62,13 +55,13 @@ function ProjectPage() {
         {project.pledges.map((pledgeData, key) => {
           return (
             <li key={key}>
-              {pledgeData.amount} from {pledgeData.supporter}
+              ${pledgeData.amount} from {pledgeData.supporter} -{" "}
+              {pledgeData.comment}
             </li>
           );
         })}
       </ul>
       <PledgeButton />
-      {/* <PledgeForm /> */}
     </div>
   );
 }
