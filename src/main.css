@@ -1,61 +1,79 @@
 /* --- BASE FONTS --- */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --heading-font: Nunito;
+  --heading-font: Tomorrow;
   --body-font: Open Sans;
 }
 
 /* --- BASE COLOURS --- */
 :root {
-    --white: #FCF6EE;
-    --darkblue: #00090f;
-    --blue: #001F34;
-    --lightblue: #2EDEE6;
-  }
+  --white: #fcf6ee;
+  --darkblue: #00090f;
+  --blue: #001f34;
+  --lightblue: #2edee6;
+}
 
 /* --- CSS RESET --- */
 html {
-    font-family: var(--body-font), sans-serif;
-    font-size: 16px;
-    background-color: var(--blue);
-    color: var(--white);
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-family: var(--body-font), sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  background-color: var(--blue);
+  color: var(--white);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-header, footer {
-    padding: 10px 16px;  
+header,
+footer {
+  padding: 10px 16px;
 }
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 h1 {
-    font-family: var(--heading-font), sans-serif;
-    font-size: 48px;
-    padding: 8px 10px 6px;
+  font-family: var(--heading-font), sans-serif;
+  font-size: 2.5rem;
+  padding: 8px 10px 6px;
 }
 h2 {
-    color: var(--darkbrown);
-    font-family: var(--heading-font), sans-serif;
-    font-size: 36px;
-    padding: 6px 10px 16px;
+  color: var(--darkbrown);
+  font-family: var(--heading-font), sans-serif;
+  font-size: 1.9rem;
+  padding: 6px 10px 16px;
 }
 h3 {
-    color: var(--darkbrown);
-    font-family: var(--heading-font), sans-serif;
-    font-size: 24px;
-    padding: 8px 10px 8px;
+  color: var(--darkbrown);
+  font-family: var(--heading-font), sans-serif;
+  font-size: 1.5rem;
+  padding: 8px 10px 8px;
 }
 a {
-    color: var(--white);
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
 }
 img {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+section {
+  padding: 40px 30px;
 }

@@ -1,16 +1,16 @@
 .nav-bar {
-    background-color: var(--darkblue);
-    font-family: var(--heading-font), sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  background-color: var(--darkblue);
+  font-family: var(--heading-font), sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .nav-bar a {
-    padding: 10px;
+  padding: 10px;
 }
 
 .nav-bar a:hover {
-    text-decoration: underline 2px;
-    text-underline-offset: 0.25rem;
+  text-decoration: underline 2px;
+  text-underline-offset: 0.25rem;
 }
