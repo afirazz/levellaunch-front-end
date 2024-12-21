@@ -64,6 +64,10 @@ a {
   color: var(--white);
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline 2px;
+  text-underline-offset: 0.25rem;
+}
 img {
   width: auto;
   height: auto;
@@ -75,5 +79,5 @@ select {
   font: inherit;
 }
 section {
-  padding: 40px 30px;
+  padding: 20px;
 }
