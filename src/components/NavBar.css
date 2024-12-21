@@ -2,7 +2,6 @@
   background-color: var(--darkblue);
   font-family: var(--heading-font), sans-serif;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -10,7 +9,17 @@
   padding: 10px;
 }
 
-.nav-bar a:hover {
+.site-homepage-link {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
   text-decoration: underline 2px;
   text-underline-offset: 0.25rem;
 }

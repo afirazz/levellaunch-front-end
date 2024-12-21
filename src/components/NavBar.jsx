@@ -13,17 +13,30 @@ function NavBar() {
   return (
     <div>
       <nav className="nav-bar">
-        <Link to="/">
-          <h3>LEVEL LAUNCH</h3>
+        <Link to="/" className="site-homepage-link">
+          LEVEL LAUNCH
         </Link>
-        <Link to="/about">About</Link>
-        {auth.token ? (
-          <Link to="/" onClick={handleLogout}>
-            Log Out
-          </Link>
-        ) : (
-          <Link to="/login">Login</Link>
-        )}
+        <ul className="nav-links">
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          {auth.token ? (
+            <li>
+              <Link to="/" onClick={handleLogout}>
+                Log Out
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/signup">Sign Up</Link>
+              </li>
+            </>
+          )}
+        </ul>
       </nav>
       <Outlet />
     </div>
