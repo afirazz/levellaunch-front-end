@@ -32,8 +32,12 @@ function ProjectPage() {
     return <p>{error.message}</p>;
   }
 
+  console.log(project);
+
   const [pledgeList, setPledgeList] = [project.pledges];
   console.log(pledgeList);
+
+  // const userDetails = []
 
   const PledgeButton = () => {
     const [pledgeFormVisible, setPledgeFormVisible] = useState(false);
@@ -58,10 +62,11 @@ function ProjectPage() {
     <div className="project-page-container">
       <section className="project-details">
         <h1>{project.title}</h1>
-        <p>Subtitle here</p>
         <p>{gameTypeChoices[project.game_type]}</p>
         <img src={project.image} />
-        <p>test</p>
+        <p>
+          By {project.owner.first_name} {project.owner.last_name}
+        </p>
         <progress value="1000" max={project.goal} />
       </section>
       <div className="description-pledges-container">
@@ -76,7 +81,7 @@ function ProjectPage() {
             {project.pledges.map((pledgeData, key) => {
               return (
                 <li key={key}>
-                  ${pledgeData.amount} from {pledgeData.supporter} -{" "}
+                  ${pledgeData.amount} from {pledgeData.supporter.first_name} -{" "}
                   {pledgeData.comment}
                 </li>
               );
