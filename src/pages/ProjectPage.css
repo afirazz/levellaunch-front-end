@@ -1,0 +1,36 @@
+.project-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-details {
+  text-align: center;
+  width: 1000px;
+}
+
+.project-details img {
+  width: 600px;
+}
+
+.project-page-container button {
+  background-color: var(--lightblue);
+  color: var(--darkblue);
+  width: 100%;
+  border: 0;
+  padding: 8px;
+  margin: 8px 0px 8px 0px;
+  cursor: pointer;
+}
+
+.description-pledges-container {
+  display: flex;
+}
+
+.project-description {
+  width: 600px;
+}
+
+.project-pledges {
+  width: 400px;
+}

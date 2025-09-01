@@ -46,19 +46,16 @@ ul {
 h1 {
   font-family: var(--heading-font), sans-serif;
   font-size: 2.5rem;
-  padding: 8px 10px 6px;
 }
 h2 {
   color: var(--darkbrown);
   font-family: var(--heading-font), sans-serif;
   font-size: 1.9rem;
-  padding: 6px 10px 16px;
 }
 h3 {
   color: var(--darkbrown);
   font-family: var(--heading-font), sans-serif;
   font-size: 1.5rem;
-  padding: 8px 10px 8px;
 }
 a {
   color: var(--white);
@@ -79,5 +76,5 @@ select {
   font: inherit;
 }
 section {
-  padding: 20px;
+  padding: 10px;
 }
